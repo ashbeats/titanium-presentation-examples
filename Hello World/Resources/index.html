@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Hello, World!</title>
+    <script type="text/javascript">
+        var mainMenu = Titanium.UI.createMenu();
+        mainMenu.appendItem(Titanium.UI.createMenuItem("File"));
+        
+        var menu = Titanium.UI.createMenu();
+        menu.appendItem(Titanium.UI.createMenuItem("Quit", function() {
+            if (confirm("Are you sure you want to quit?")) {
+                Titanium.App.exit();
+            }
+        }));
+        mainMenu.getItemAt(0).setSubmenu(menu);
+
+        Titanium.UI.currentWindow.menu = mainMenu;
+    </script>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+</body>
+</html>
